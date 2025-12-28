@@ -1,0 +1,516 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: black;
+    color: white;
+}
+/* About Page Layout */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Profile Photo Styling */
+.about-img img {
+    width: 310px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #4cc9f0;
+    box-shadow: 0 0 20px rgba(76, 201, 240, 0.4);
+}
+
+/* Text side */
+.about-text {
+    max-width: 600px;
+}
+.about-text h2 {
+    color: #4cc9f0;
+    margin-bottom: 18px;
+}
+.about-text p {
+    color: #dbe4ea;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+/* NAVIGATION BAR */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.nav-links a:hover {
+    color: #4cc9f0;
+    transform: scale(1.1);
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #4cc9f0;
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HOME SECTION */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+.image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+.info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #4cc9f0;
+}
+.info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4cc9f0;
+    color: #0a0a0a;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #fff;
+}
+
+/* SHARED SECTION STYLES (Glass Effect) */
+#about, #education, #skills {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: Arial, sans-serif;
+}
+
+/* SECTION HEADERS */
+#about h2, 
+#education h2, 
+#skills h2 {
+    color: #4cc9f0;
+    font-size: 30px;
+    border-bottom: 3px solid #4cc9f0;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/* ABOUT TEXT --------------------------------------------------------------------*/
+#about p {
+    color: #dbe4ea;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* EDUCATION */
+#education dl {
+    margin-left: 10px;
+}
+#education dt {
+    font-size: 18px;
+    color: #90e0ef;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#education dd {
+    font-size: 16px;
+    color: #cfe3ea;
+    margin-left: 25px;
+    padding: 10px 14px;
+    border-left: 3px solid #4cc9f0;
+    border-radius: 6px;
+    background: rgba(76, 201, 240, 0.15);
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+#education dd:hover {
+    background: rgba(76, 201, 240, 0.32);
+    transform: scale(1.02);
+}
+
+/* SKILLS ----------------------------------------------------------------------------*/
+
+/* Skills Section */
+#skills {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: Arial, sans-serif;
+}
+
+/* Skills Headings */
+#skills h2 {
+    color: #4cc9f0;
+    border-bottom: 3px solid #4cc9f0;
+    font-size: 26px;
+    display: inline-block;
+    margin: 25px 0 12px;
+}
+
+/* Skill lists */
+#skills ul {
+    padding-left: 15px;
+    margin-bottom: 18px;
+}
+
+/* Skill items */
+#skills li {
+    color: #dbe4ea;
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-left: 3px solid #4cc9f0;
+    background: rgba(76, 201, 240, 0.15);
+    border-radius: 6px;
+    line-height: 1.5;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Animation */
+#skills li:hover {
+    background: rgba(76, 201, 240, 0.35);
+    transform: scale(1.03);
+}
+
+/* Highlight strong labels */
+#skills strong {
+    color: #90e0ef;
+}
+
+/* Certifications Section */
+#certifications {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+/* Title */
+#certifications h2 {
+    color: #4cc9f0;
+    font-size: 30px;
+    border-bottom: 3px solid #4cc9f0;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/* List */
+#certifications ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#certifications li {
+    color: #dbe4ea;
+    margin: 12px auto;
+    padding: 12px 16px;
+    width: 65%;
+    background: rgba(76, 201, 240, 0.20);
+    border-left: 4px solid #4cc9f0;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#certifications li:hover {
+    background: rgba(76, 201, 240, 0.35);
+    transform: scale(1.03);
+}
+
+/* PROJECTS SECTION----------------------------------------------------------------------------------------------- */
+#projects {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+#projects h2 {
+    color: #4cc9f0;
+    font-size: 32px;
+    border-bottom: 3px solid #4cc9f0;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* Grid for project cards */
+.project-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Project Cards */
+.project-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(76, 201, 240, 0.15);
+    border-left: 4px solid #4cc9f0;
+    transition: 0.3s ease;
+}
+
+/* Project Card Hover */
+.project-card:hover {
+    background: rgba(76, 201, 240, 0.35);
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: #90e0ef;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #dbe4ea;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* Project Button */
+.project-btn {
+    display: inline-block;
+    background: #4cc9f0;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: white;
+}
+
+
+/* Footer Social Icons ----------------------------------------------------------------------*/
+/* FOOTER */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Top Text */
+footer p {
+    color: #dbe4ea;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+/* Social Icons Row */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+/* Icon Styling */
+footer .social-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(76, 201, 240, 0.20);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* Social Hover Effects */
+footer .whatsapp:hover { background: #25d366; transform: scale(1.15); }
+footer .instagram:hover { background: #e4405f; transform: scale(1.15); }
+footer .linkedin:hover { background: #0077b5; transform: scale(1.15); }
+footer .email:hover { background: #ff9f43; transform: scale(1.15); }
+footer .github:hover { background: #333; transform: scale(1.15); }
+
+/* Copyright Text */
+footer .copyright {
+    font-size: 14px;
+    color: #9da9b0;
+    margin-top: 10px;
+}
+
+/* ======================================================
+   📱 MOBILE RESPONSIVE DESIGN
+====================================================== */
+@media (max-width: 768px) {
+
+    /* Hide overflow issues */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAVIGATION */
+    .logo-container {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    /* MAIN SECTIONS */
+    section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    /* Home Page */
+    .info h1 {
+        font-size: 28px;
+    }
+    .info h3 {
+        font-size: 18px;
+    }
+    .info p {
+        font-size: 16px;
+        max-width: 90%;
+        margin: auto;
+    }
+    .image img {
+        width: 240px;
+    }
+
+    /* About Page */
+    .about-img img {
+        width: 230px;
+    }
+    .about-text {
+        max-width: 90%;
+    }
+
+    /* Education Section */
+    #education dd {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    /* Skills */
+    #skills li {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    /* Projects */
+    .project-card {
+        width: 90%;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-form {
+        width: 95%;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px;
+    }
+    .footer-social {
+        gap: 12px;
+    }
+    footer .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
